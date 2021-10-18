@@ -1,0 +1,14 @@
+#logo{
+	width: 128px;
+	height: 128px;
+}
+
+body, .container{
+	background-color: #b0c4de !important;
+}
+
+.dark-bg{
+	background-color: #021f2f !important;
+}
+
+p{font-size: 18px;}

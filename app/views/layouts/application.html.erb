@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HarmonyClub</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark dark-bg">
+      <div class="container-fluid">
+        <a id="logo" class="navbar-brand" href="#"><%= image_tag "layout/logo.png", id: "logo"%></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item h5">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <% @sections.each do |sec| %>
+ 
+            <li class="nav-item dropdown h5">
+              <a class="nav-link dropdown-toggle" href="#" id="more" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <%= sec.title %>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="more">
+                <% sec.pages.each do |page| %>
+                  <li><a class="dropdown-item" href="#"><%= page.title %></a></li>
+                <% end %>
+              </ul>
+            </li>
+            <% end %>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <div class="row text-secondary dark-bg py-5">
+      <% @sections.each do |sec| %>
+      <div class="col-md-3 px-5 mb-4">
+        <p><b><%= sec.title %></b></p>
+        <% sec.pages.each do |page| %>
+          <a href="#"><%= page.title %></a><br>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </body>
+</html>
