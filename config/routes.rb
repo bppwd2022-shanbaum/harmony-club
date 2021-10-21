@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'pages/show'
-  root 'pages#show'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'site/home'
+  resources :pages
+  resources :sections
+  devise_for :users
+  
+  root 'site#home'
 end

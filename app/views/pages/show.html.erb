@@ -1,112 +1,39 @@
-<div id="show">
-	<div class="row my-5 text-center">
-		<h1 class="display-2 px-3 mt-3">Harmony Club of Worcester</h1>
-	</div>
+<p id="notice"><%= notice %></p>
 
-	<div class="row">
-		<div class="col-md-4 ">
-			<%= image_tag "layout/s1.png", class: "ms-auto d-none d-md-block w-50" %>
-		</div>
-		<div class="col-md-4 text-center">
-			<%= image_tag "layout/s3.png", class: "mx-auto d-none d-md-block w-50" %>
-		</div>
-		<div class="col-md-4 text-start">
-			<%= image_tag "layout/s2.png", class: "me-auto d-none d-md-block w-50" %>
-		</div>
-	</div>
+<p>
+  <strong>Title:</strong>
+  <%= @page.title %>
+</p>
 
-	<div class="row mt-5">
-		
-		<p>&nbsp;&nbsp;&nbsp;The Harmony Club of Worcester, Massachusetts is a fraternal organization of men and women of French descent that was organized in 1925. The Club holds monthly meetings at O'Connor's Restaurant in Worcester with guest speakers. The Club also sponsors other cultural/social/sport events, tours, adult and children's Christmas parties. Members can participate in our golf league that takes place at Bed Rock Golf Club in Rutland, MA.</p>
-		<br>
-		<p>&nbsp;&nbsp;&nbsp;Our major fund raiser is our "Bob Picard Memorial Golf Tournament" that is held at the Leicester Country Club in Leicester, MA every September. The proceeds from this tournament are the sole funding of the scholarship and civic awards.</p>
-	</div>
+<p>
+  <strong>Section:</strong>
+  <%= @page.section_id %>
+</p>
 
-	<div class="row">
-		<div class="col-md-4 text-center mt-5">
-			<div class="card">
-			  <%= image_tag "layout/card.png", class: "card-img-top" %>
-			  <div class="card-body">
-			    <h3 class="card-title">Our History</h3>
-			    <p class="card-text">The Harmony Club of Worcester has a rich history spanning several decades of French culture.</p>
-			    <a href="#" class="btn btn-primary">Read More</a>
-			  </div>
-			</div>
-		</div>
-		<div class="col-md-4 text-center mt-5">
-			<div class="card">
-			  <%= image_tag "layout/card.png", class: "card-img-top" %>
-			  <div class="card-body">
-			    <h3 class="card-title">For Members</h3>
-			    <p class="card-text">Becoming a member provides you with many resources to keep French culture alive and well.</p>
-			    <a href="#" class="btn btn-primary">Sign Up/Login</a>
-			  </div>
-			</div>
-		</div>
-		<div class="col-md-4 text-center mt-5">
-			<div class="card">
-			  <%= image_tag "layout/card.png", class: "card-img-top" %>
-			  <div class="card-body">
-			    <h3 class="card-title">Events</h3>
-			    <p class="card-text">Our club holds many events, from golfing to dining, all of which help bring our community together.</p>
-			    <a href="#" class="btn btn-primary">Events</a>
-			  </div>
-			</div>
-		</div>
+<p>
+  <strong>Page type:</strong>
+  <%= @page.page_type %>
+</p>
 
-		<div class="row my-5">
-			<h2 class="display-4 text-center">Club Officers</h2>
-		</div>
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="row mb-4">
-					<div class="col-4">
-						<%= image_tag "layout/pic.png", class: "d-block w-100" %>
-					</div>
-					<div class="col-8">
-						<b class="h5">Dave Desroches - <i>President</i></b><br>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</div>
-				<div class="row mb-4">
-					<div class="col-4">
-						<%= image_tag "layout/pic.png", class: "d-block w-100" %>
-					</div>
-					<div class="col-8">
-						<b class="h5">Ralph Berthiaume - <i>Vice President</i></b><br>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</div>
-				<div class="row mb-4">
-					<div class="col-4">
-						<%= image_tag "layout/pic.png", class: "d-block w-100" %>
-					</div>
-					<div class="col-8">
-						<b class="h5">Cless Dupuis - <i>Treasurer</i></b><br>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="row mb-4">
-					<div class="col-4">
-						<%= image_tag "layout/pic.png", class: "d-block w-100" %>
-					</div>
-					<div class="col-8">
-						<b class="h5">Peter Cutillo - <i>Secretary</i></b><br>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</div>
-				<div class="row mb-4">
-					<div class="col-4">
-						<%= image_tag "layout/pic.png", class: "d-block w-100" %>
-					</div>
-					<div class="col-8">
-						<b class="h5">David Richardsss - <i>Sgt.-At-Arms</i></b><br>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<p>
+  <strong>Permalink:</strong>
+  <%= @page.permalink %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @page.visible %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @page.position %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @page.content %>
+</p>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>
