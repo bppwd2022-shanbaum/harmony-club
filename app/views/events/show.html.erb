@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-sm-2"><strong><p>Title:</p></strong></div>
+  <div class="col-sm-8"><p><%= @event.title %></p></div>
+</div>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Details:</p></strong></div>
+  <div class="col-sm-8"><p><%= @event.details %></p></div>
+</div>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-sm-2"><strong><p>Title:</p></strong></div>
+  <div class="col-sm-8"><p><%= @album.title %></p></div>
+</div>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Description:</p></strong></div>
+  <div class="col-sm-8"><p><%= @album.description %></p></div>
+</div>
+
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>

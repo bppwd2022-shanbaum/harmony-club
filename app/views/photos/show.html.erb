@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-sm-2"><strong><p>Album:</p></strong></div>
+  <div class="col-sm-8"><p><%= @photo.album_id %></p></div>
+</div>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Title:</p></strong></div>
+  <div class="col-sm-8"><p><%= @photo.title %></p></div>
+</div>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Description:</p></strong></div>
+  <div class="col-sm-8"><p><%= @photo.description %></p></div>
+</div>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

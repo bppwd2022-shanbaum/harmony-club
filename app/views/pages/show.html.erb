@@ -1,39 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @page.title %>
-</p>
-
-<p>
-  <strong>Section:</strong>
-  <%= @page.section_id %>
-</p>
-
-<p>
-  <strong>Page type:</strong>
-  <%= @page.page_type %>
-</p>
-
-<p>
-  <strong>Permalink:</strong>
-  <%= @page.permalink %>
-</p>
-
-<p>
-  <strong>Visible:</strong>
-  <%= @page.visible %>
-</p>
-
-<p>
-  <strong>Position:</strong>
-  <%= @page.position %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @page.content %>
-</p>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Title:</p></strong></div>
+  <div class="col-sm-8"><p><%= @page.title %></p></div>
+</div>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Section</p></strong></div>
+  <div class="col-sm-8"><p><%= @page.section_id %></p></div>
+</div>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Page type:</p></strong></div>
+  <div class="col-sm-8"><p><%= @page.page_type %></p></div>
+</div>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Permalink:</p></strong></div>
+  <div class="col-sm-8"><p><%= @page.permalink %></p></div>
+</div>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Visible:</p></strong></div>
+  <div class="col-sm-8"><p><%= @page.visible %></p></div>
+</div>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Position:</p></strong></div>
+  <div class="col-sm-8"><p><%= @page.position %></p></div>
+</div>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Content:</p></strong></div>
+  <div class="col-sm-8"><p><%= @page.content %></p></div>
+</div>
 
 <%= link_to 'Edit', edit_page_path(@page) %> |
 <%= link_to 'Back', pages_path %>
