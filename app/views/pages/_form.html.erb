@@ -38,7 +38,12 @@
     </div>
     <div class="row">
       <div class="col-sm-2"><strong><p><%= form.label :content %></p></strong></div>
-      <div class="col-sm-8"><%= form.text_area :content %></div>    
+      <div class="col-sm-8"><%= form.text_area :content, class:"tinymce" %></div> 
+      <%= tinymce %>   
+    </div>
+    <div class="row">
+      <div class="col-sm-2"><strong><p><%= form.label :destination %></p></strong></div>
+      <div class="col-sm-8"><%= form.text_field :destination %></div>    
     </div>
 
 

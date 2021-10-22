@@ -28,6 +28,10 @@
   <div class="col-sm-2"><strong><p>Content:</p></strong></div>
   <div class="col-sm-8"><p><%= @page.content %></p></div>
 </div>
+<div class="row">
+  <div class="col-sm-2"><strong><p>Destination:</p></strong></div>
+  <div class="col-sm-8"><p><%= @page.destination %></p></div>
+</div>
 
 <%= link_to 'Edit', edit_page_path(@page) %> |
 <%= link_to 'Back', pages_path %>

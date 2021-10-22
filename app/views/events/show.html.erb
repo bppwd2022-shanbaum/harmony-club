@@ -6,8 +6,18 @@
 </div>
 <div class="row">
   <div class="col-sm-2"><strong><p>Details:</p></strong></div>
-  <div class="col-sm-8"><p><%= @event.details %></p></div>
+  <div class="col-sm-8"><p><%= raw @event.details %></p></div>
 </div>
+<% if @event.photo.attached? %>
+  <div class="row">
+    <div class="col-sm-2"><strong><p>Photo:</p></strong></div>
+    <div class="col-sm-8"><p><%= image_tag @event.photo, class:"smaller" %></p></div>
+  </div>
+<% else %>
+  <div class="row">
+    <div class="col-sm-2"><strong><p>Photo is NOT attached</p></strong></div>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

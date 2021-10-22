@@ -17,8 +17,15 @@
     </div>
     <div class="row">
       <div class="col-sm-2"><strong><p><%= form.label :details %></p></strong></div>
-      <div class="col-sm-8"><%= form.text_area  :details %></div>    
+      <div class="col-sm-8"><%= form.text_area  :details, class:"tinymce" %></div>
+      <%= tinymce %>
+ 
     </div>
+    <div class="row">
+      <div class="col-sm-2"><strong><p><%= form.label :photo %></p></strong></div>
+      <div class="col-sm-8"><%= form.file_field :photo %></div>    
+    </div>
+
 
     <div class="actions">
       <%= form.submit class:"btn btn-primary" %>
