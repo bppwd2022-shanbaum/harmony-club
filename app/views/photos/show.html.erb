@@ -12,6 +12,16 @@
   <div class="col-sm-2"><strong><p>Description:</p></strong></div>
   <div class="col-sm-8"><p><%= @photo.description %></p></div>
 </div>
+<% if @photo.image.attached? %>
+  <div class="row">
+    <div class="col-sm-2"><strong><p>Image:</p></strong></div>
+    <div class="col-sm-8"><p><%= image_tag @photo.image, class:"smaller" %></p></div>
+  </div>
+<% else %>
+  <div class="row">
+    <div class="col-sm-2"><strong><p>Image is NOT attached</p></strong></div>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

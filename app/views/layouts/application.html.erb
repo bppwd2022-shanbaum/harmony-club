@@ -37,6 +37,8 @@
                     <li><%= link_to page.title, site_page_path(id: page.id), class:"dropdown-item" %></li>
                   <% elsif page.page_type == "Internal URL" %>
                     <li><%= link_to page.title, page.destination, class:"dropdown-item" %></li>
+                  <% elsif page.page_type == "External URL" %>
+                    <%= link_to page.title, page.destination, class:"dropdown-item", target:"_blank" %>
                   <% end %>
                   
                 <% end %>
